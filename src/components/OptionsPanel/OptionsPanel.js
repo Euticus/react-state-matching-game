@@ -3,12 +3,16 @@ import React from 'react'
 import Button from '../Button'
 import TileSelector from '../TileSelector'
 
-const OptionsPanel = () => (
-  <div>
-    <TileSelector />
-    <Button />
-  </div>
-)
+const OptionsPanel = ({numTiles, playing, startGame}) => {
+
+
+  return (
+    <div>
+      <TileSelector numTiles={numTiles} />
+      <Button playing={playing} startGame={startGame}/>
+    </div>
+  )
+}
   
   
 
