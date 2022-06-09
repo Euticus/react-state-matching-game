@@ -9,15 +9,11 @@ const Board = (props) => {
     gridTemplateRows: `repeat(${Math.sqrt(numTiles)}, 1fr)`,
   }
 
-  const parseTiles = () => {
-    tiles.map((tile)=>{
-      return <Tile tile={tile} />
-    })
-  }
+  const tilesArr = props.tiles.map((tile) => (<Tile {...tile} />))
 
   return (
     <div className='Board' style={gridConfig}>
-      {parseTiles()}
+      {tilesArr}
     </div>
   )
 }
