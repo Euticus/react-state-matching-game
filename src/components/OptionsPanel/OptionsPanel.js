@@ -3,8 +3,8 @@ import React from 'react'
 import Button from '../Button'
 import TileSelector from '../TileSelector'
 
-const OptionsPanel = ({numTiles, playing, startGame}) => {
-
+const OptionsPanel = (props) => {
+  const {numTiles, playing, startGame} = props
 
   return (
     <div>

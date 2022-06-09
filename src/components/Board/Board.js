@@ -2,14 +2,14 @@ import React from 'react'
 import Tile from '../Tile'
 import './Board.css';
 
-const Board = ({numTiles, tiles}) => {
-
+const Board = (props) => {
+  const {numTiles, tiles} = props
   const gridConfig = {
-    gridTemplateColumns: `repeat(${Math.sqrt(props.numTiles)}, 1fr)`,
-    gridTemplateRows: `repeat(${Math.sqrt(props.numTiles)}, 1fr)`,
+    gridTemplateColumns: `repeat(${Math.sqrt(numTiles)}, 1fr)`,
+    gridTemplateRows: `repeat(${Math.sqrt(numTiles)}, 1fr)`,
   }
 
-  parseTiles = () => {
+  const parseTiles = () => {
     tiles.map((tile)=>{
       return <Tile tile={tile} />
     })

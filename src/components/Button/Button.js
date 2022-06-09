@@ -1,7 +1,7 @@
 import React from 'react';
 import './Button.css';
 
-const Button = ({playing}) => {
+const Button = ({playing, startGame}) => {
     return (
         <button onClick={startGame}>{playing ? 'reset' : 'start'} </button>
     )
