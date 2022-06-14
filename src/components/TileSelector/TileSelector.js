@@ -1,4 +1,5 @@
 import React from 'react'
+import GameContext from '../../../refactor/GameContext'
 import useHover from '../../hooks'
 import './TileSelector.css'
 
